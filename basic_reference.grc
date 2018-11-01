@@ -22,7 +22,7 @@
     </param>
     <param>
       <key>description</key>
-      <value></value>
+      <value>Simple adjustable RX monitor</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -46,7 +46,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>top_block</value>
+      <value>basic_reference</value>
     </param>
     <param>
       <key>max_nouts</key>
@@ -113,7 +113,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(215, 11)</value>
+      <value>(864, 28)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -148,7 +148,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 160)</value>
+      <value>(8, 100)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -175,7 +175,16 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>"Wide Band FM Receiver"
+
+(~4:00)
+
+Quadrature rate = output rate of low pass filter
+(which is sample rate / decimation, or:
+2M / 4 = 500k)
+
+Decimation of 1 means don't change sample
+rate</value>
     </param>
     <param>
       <key>affinity</key>
@@ -187,7 +196,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(821, 179)</value>
+      <value>(616, 244)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -234,7 +243,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1044, 291)</value>
+      <value>(944, 148)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -269,7 +278,18 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>Cutoff freq referred to as "half bandwidth of 
+the desired channel bandwidth". Still not 
+100% clear on what this means. (~3:30)
+
+Transition width is how quickly the filter rolls off
+(~3:38)
+
+Decimation - cuts down audio sample rate?
+(~3:45)
+
+This means the output rate due to decimation 
+will be 2M / 4 = 500k</value>
     </param>
     <param>
       <key>affinity</key>
@@ -293,7 +313,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(390, 139)</value>
+      <value>(296, 204)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -333,6 +353,41 @@
     </param>
   </block>
   <block>
+    <key>note</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value>A video describing a (roughly) similar setup 
+can be found here:
+https://www.youtube.com/watch?v=KWeY2yqwVA0
+
+(all times in parens are referencing the video)</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(200, 12)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>note_0</value>
+    </param>
+    <param>
+      <key>note</key>
+      <value>Video tutorial</value>
+    </param>
+  </block>
+  <block>
     <key>rational_resampler_xxx</key>
     <param>
       <key>alias</key>
@@ -340,7 +395,12 @@
     </param>
     <param>
       <key>comment</key>
-      <value></value>
+      <value>This block takes the absurdly high sample rate
+and turns it into something the sound card can
+actually handle without exploding.
+
+Interpolation - this seems to mean that it will
+output samples at ~48 KHz? (~4:48)</value>
     </param>
     <param>
       <key>affinity</key>
@@ -360,7 +420,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1044, 163)</value>
+      <value>(944, 228)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -615,7 +675,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(119, 123)</value>
+      <value>(40, 188)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -686,7 +746,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(406, 426)</value>
+      <value>(288, 548)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -749,101 +809,6 @@
       <value>10</value>
     </param>
   </block>
-  <block>
-    <key>wxgui_waterfallsink2</key>
-    <param>
-      <key>avg_alpha</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>average</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>baseband_freq</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>comment</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>dynamic_range</key>
-      <value>100</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>fft_rate</key>
-      <value>15</value>
-    </param>
-    <param>
-      <key>fft_size</key>
-      <value>512</value>
-    </param>
-    <param>
-      <key>freqvar</key>
-      <value>None</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(408, 612)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>grid_pos</key>
-      <value></value>
-    </param>
-    <param>
-      <key>id</key>
-      <value>wxgui_waterfallsink2_0</value>
-    </param>
-    <param>
-      <key>notebook</key>
-      <value></value>
-    </param>
-    <param>
-      <key>ref_scale</key>
-      <value>2.0</value>
-    </param>
-    <param>
-      <key>ref_level</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>title</key>
-      <value>Waterfall Plot</value>
-    </param>
-    <param>
-      <key>type</key>
-      <value>complex</value>
-    </param>
-    <param>
-      <key>win_size</key>
-      <value></value>
-    </param>
-    <param>
-      <key>win</key>
-      <value>None</value>
-    </param>
-  </block>
   <connection>
     <source_block_id>analog_wfm_rcv_0</source_block_id>
     <sink_block_id>rational_resampler_xxx_0</sink_block_id>
@@ -871,12 +836,6 @@
   <connection>
     <source_block_id>rtlsdr_source_0</source_block_id>
     <sink_block_id>wxgui_fftsink2_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>rtlsdr_source_0</source_block_id>
-    <sink_block_id>wxgui_waterfallsink2_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
