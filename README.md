@@ -15,3 +15,4 @@
 * Recording
 * Autorecording
 * Frequency hit histograms
+* Nicer QT GUI
