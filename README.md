@@ -16,3 +16,4 @@
 * Autorecording
 * Frequency hit histograms
 * Nicer QT GUI
+* Keyboard input
